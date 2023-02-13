@@ -64,14 +64,14 @@ exports.sendEmil = async (req, res) => {
       port: 465,
       secure: true, // true for 465, false for other ports
       auth: {
-        user: 'website.hrms@gmail.com', // gmail account
-        pass: 'xiqqzekdlbumivdha111', // gmail password
+        user: 'youremail@yourmail.com', // gmail account
+        pass: 'yourpassword', // gmail password
       },
     });
 
     let info = await transporter.sendMail({
-      from: '"Smart EDU Contact Form" <website.hrms@gmail.com>', // sender address
-      to: 'halludba88@gmail.com', // list of receivers
+      from: '"Smart EDU Contact Form" <youremail@yourmail.com>', // sender address
+      to: 'to@to.com', // list of receivers
       subject: 'Smart EDU', // Subject line
       html: outputMessage, // html body
     });
